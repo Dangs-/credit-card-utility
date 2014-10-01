@@ -1,0 +1,39 @@
+<html>
+<head>
+<script type="text/javascript" src="pasteString.js"></script>
+
+<script type="text/javascript" src="jquery-1.7.1.js"></script>
+
+
+<title>Splite</title>
+<style type="text/css">
+body, input {
+	font: normal 12px Verdana;
+}
+</style>
+
+</head>
+<body>
+
+<form>
+<h1>Split card Number</h1>
+<p>copy alphanumeric text and it will split into multiple boxes. works best in IE</p>
+
+Information
+	<label for="item1">Serial No.</label>
+	<input type="text" maxlength="5" size="5" id="item1" name="item1" />
+	- <input type="text" maxlength="4" size="4" id="item2" name="item2" /> - <input type="text" maxlength="6" size="6" id="item3" name="item3" /><br />
+	
+
+</form>
+<script>
+
+function init(){
+	var f = document.forms[0];
+	var item = new spiltString(document.getElementById('item1').maxLength, f.item1, f.item2, f.item3); //pass the original maxlength of the first field and all the references of as many fields as needed
+	
+}
+window.onload = init;
+</script>
+</body>
+</html>
